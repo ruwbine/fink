@@ -1,0 +1,32 @@
+services:
+  fink-app:
+    container_name: fink-app
+    build: .
+    ports:
+      - '127.0.0.1:3000:3000'
+    depends_on:
+      - postgres
+    volumes:
+      - /app/node_modules
+    env_file: .env
+
+  postgres:
+    image: postgres:17
+    container_name: fink-postgres
+    restart: always
+    ports:
+      - '127.0.0.1:5432:5432'
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-adminDB}
+      POSTGRES_DB: ${POSTGRES_DB:-app_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
