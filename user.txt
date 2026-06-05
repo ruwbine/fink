@@ -1,0 +1,9 @@
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MGZjNTc5NC02OTRkLTQzMTYtYjczNC1kYWM5YWE4ODA0NDAiLCJlbWFpbCI6InN0cmluZ0BtYWlsLnJ1IiwiaWF0IjoxNzgwNzQ4MDY3LCJleHAiOjE3ODA3NDg5Njd9.S7GYS4pjgqnFHeVbt3gjoridDB-KM9pMMd4GkSnyGGI",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MGZjNTc5NC02OTRkLTQzMTYtYjczNC1kYWM5YWE4ODA0NDAiLCJlbWFpbCI6InN0cmluZ0BtYWlsLnJ1IiwiaWF0IjoxNzgwNzQ4MDY3LCJleHAiOjE3ODEzNTI4Njd9.7jDgO_oRF9c4Ui8DyJjmrfQ7Ru9p5mSLMt2aP5s5lYQ",
+  "user": {
+    "id": "90fc5794-694d-4316-b734-dac9aa880440",
+    "email": "string@mail.ru",
+    "username": "string"
+  }
+}

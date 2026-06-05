@@ -1,13 +1,16 @@
+import 'dotenv/config';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@prisma/client';
-
+import pg from 'pg';
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {
   constructor() {
-    const adapter = new PrismaPg({
-      connectionString: process.env.DATABASE_URL as string,
+    const pgPool = new pg.Pool({
+      connectionString: process.env.DATABASE_URL,
     });
+
+    const adapter = new PrismaPg(pgPool);
     super({ adapter });
   }
 
